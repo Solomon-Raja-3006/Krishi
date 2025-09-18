@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-inter;
+  }
+
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Shepherd.js Custom Theme */
+@layer components {
+  .shepherd-theme-custom {
+    @apply bg-white rounded-2xl shadow-2xl border border-gray-200 max-w-md;
+  }
+  
+  .shepherd-theme-custom .shepherd-header {
+    @apply p-6 pb-0;
+  }
+  
+  .shepherd-theme-custom .shepherd-title {
+    @apply text-xl font-bold text-gray-900 mb-0;
+  }
+  
+  .shepherd-theme-custom .shepherd-text {
+    @apply p-6 text-gray-600 leading-relaxed;
+  }
+  
+  .shepherd-theme-custom .shepherd-footer {
+    @apply p-6 pt-0 flex justify-between items-center;
+  }
+  
+  .shepherd-theme-custom .shepherd-button {
+    @apply px-4 py-2 rounded-full font-medium text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .shepherd-theme-custom .shepherd-button-primary {
+    @apply bg-green-600 text-white hover:bg-green-700 focus:ring-green-500;
+  }
+  
+  .shepherd-theme-custom .shepherd-button-secondary {
+    @apply bg-gray-100 text-gray-700 hover:bg-gray-200 focus:ring-gray-500;
+  }
+  
+  .shepherd-theme-custom .shepherd-cancel-icon {
+    @apply text-gray-400 hover:text-gray-600 w-5 h-5;
+  }
+  
+  .shepherd-modal-overlay-container {
+    @apply bg-black bg-opacity-50 backdrop-blur-sm;
+  }
+  
+  .shepherd-target-highlighted {
+    @apply ring-4 ring-green-500 ring-opacity-50 rounded-lg;
+  }
+}
+
+/* Glassmorphism utility classes */
+@layer utilities {
+  .glass {
+    @apply bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20;
+  }
+  
+  .glass-dark {
+    @apply bg-gray-900 bg-opacity-10 backdrop-blur-lg border border-gray-700 border-opacity-20;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-green-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-green-600;
+}
+
+/* Focus styles for accessibility */
+@layer base {
+  *:focus {
+    @apply outline-none;
+  }
+  
+  *:focus-visible {
+    @apply ring-2 ring-green-500 ring-offset-2;
+  }
+  
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    @apply ring-2 ring-green-500 ring-offset-2;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .text-gray-600 {
+    @apply text-gray-900;
+  }
+  
+  .text-gray-500 {
+    @apply text-gray-800;
+  }
+  
+  .text-gray-400 {
+    @apply text-gray-700;
+  }
+}
