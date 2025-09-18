@@ -31,16 +31,16 @@ const Footer: React.FC = () => {
   };
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/krishe-ai', label: 'GitHub' },
+    { icon: Github, href: 'https://github.com/Solomon-Raja-3006/Krishi/', label: 'GitHub' },
     { icon: Twitter, href: 'https://twitter.com/krishe_ai', label: 'Twitter' },
     { icon: Linkedin, href: 'https://linkedin.com/company/krishe-ai', label: 'LinkedIn' },
     { icon: Facebook, href: 'https://facebook.com/krishe.ai', label: 'Facebook' }
   ];
 
   const contactInfo = [
-    { icon: Mail, text: 'hello@krishe.ai', href: 'mailto:hello@krishe.ai' },
-    { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: MapPin, text: 'San Francisco, CA', href: '#location' }
+    { icon: Mail, text: 'solomonraja299@gmail.com', href: 'mailto:solomonraja299@gmail.com' },
+    { icon: Phone, text: '7676744948', href: 'tel:7676744948' },
+    { icon: MapPin, text: 'Bengaluru, India', href: '#location' }
   ];
 
   return (
@@ -218,7 +218,7 @@ const Footer: React.FC = () => {
           className="mt-12 pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center"
         >
           <div className="text-gray-400 text-sm mb-4 sm:mb-0">
-            © 2025 KRISH-e. All rights reserved. Built with ❤️ for farmers worldwide.
+            © 2025 KRISH-e. All rights reserved. Built for farmers.
           </div>
           
           <div className="flex space-x-4">
