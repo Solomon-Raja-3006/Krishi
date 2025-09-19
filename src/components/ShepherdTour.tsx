@@ -359,7 +359,7 @@ export const ShepherdTour: React.FC = () => {
   useEffect(() => {
     // Dynamically import Shepherd to avoid SSR issues
     import('shepherd.js').then((Shepherd) => {
-      const tour = new Shepherd.default(tourOptions);
+      const tour = new Shepherd(tourOptions);
       
       steps.forEach((step) => {
         tour.addStep({
